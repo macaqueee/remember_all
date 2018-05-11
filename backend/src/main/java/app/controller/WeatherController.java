@@ -1,5 +1,6 @@
 package app.controller;
 
+import app.exception.ApplicationException;
 import app.model.Weather;
 import app.service.WeatherService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,8 +19,7 @@ public class WeatherController {
     }
 
     @RequestMapping(value = "/getWeather", method = RequestMethod.GET)
-    public Weather getWeatherByCityName(String cityName) {
-        Weather weatherByCityName = weatherService.getWeatherByCityName(cityName);
-        return null;
+    public Weather getWeatherByCityName(String cityName) throws ApplicationException {
+        return weatherService.getWeatherByCityName(cityName);
     }
 }

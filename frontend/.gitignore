@@ -1,0 +1,13 @@
+target
+source/node_modules
+dist
+npm-debug.log
+test.js
+resources
+node_modules
+etc
+*.iml
+.idea/
+node
+*.MP4
+*.mp4
